@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Graphics Test</title>
+</head>
+<body class="body">
+
+    <div class="Main">
+        <canvas class="Canvas" id="Canvas"></canvas>
+
+        <div class="Right">
+            <h1 class="right-item header">Simple 3d renderer</h1>
+            <p class="right-item">Adjust the params below to achive the desired result</p>
+            <hr color="#00ff00" style="margin-bottom: 3vh; margin-top: 3vh; width: 100%;">
+            <h2 class="right-item header">Render</h2>
+            <div class="Grid">
+                <button class="button Active" id="drawlines">Draw lines?</button>
+                <button class="button Active" id="drawpoints">Draw points?</button>
+                <button class="button Active" id="clearcanvas">Clear canvas?</button>
+                <button class="button Active" id="render">Render scene?</button>
+            </div>
+            <div class="TextArea">
+                <p class="TextAreaHead">FPS</p>
+                <textarea name="fps" id="fps" style="width: 50%;" placeholder="0...120">60</textarea>
+            </div>
+            <hr color="#00ff00" style="margin-bottom: 3vh; margin-top: 3vh; width: 50%;">
+            <h2 class="right-item header">Behaviour</h2>
+            <div class="Grid" style="width: 75%; grid-template-columns: 1fr 1fr 1fr;">
+                <!-- Behaviour 1 -->
+                <div class="TextArea">
+                    <p class="TextAreaHead">Points size</p>
+                    <textarea name="Psize" id="Psize" style="width: 100%;" placeholder="3...15">7.5</textarea>
+                </div>
+                <div class="TextArea">
+                    <p class="TextAreaHead">Cube size</p>
+                    <textarea name="Csize" id="Csize" style="width: 100%;" placeholder="0.1...0.7">0.25</textarea>
+                </div>
+                <!-- Behaviour 2 -->
+                <button class="button Active" id="CRotation" style="grid-column: span 2;">Apply constant rotation?</button>
+                <div class="TextArea">
+                    <p class="TextAreaHead">Rotation value</p>
+                    <textarea name="Rvalue" id="Rvalue" style="width: 100%;" placeholder="0...360">90</textarea>
+                </div>
+                <button class="button" id="RotateXY">Rotate by XY?</button>
+                <button class="button" id="RotateYZ">Rotate by YZ?</button>
+                <button class="button Active" id="RotateZX">Rotate by ZX?</button>
+                <!-- Behaviour 3 -->
+                <button class="button" id="COffset" style="grid-column: span 2;">Apply constant offset values?</button>
+                <div class="TextArea">
+                    <p class="TextAreaHead">Offset X</p>
+                    <textarea name="OffsetX" id="OffsetX" style="width: 100%;" placeholder="-5...5"></textarea>
+                </div>
+                <div class="TextArea">
+                    <p class="TextAreaHead">Offset Y</p>
+                    <textarea name="OffsetY" id="OffsetY" style="width: 100%;" placeholder="-5...5"></textarea>
+                </div>
+                <div class="TextArea">
+                    <p class="TextAreaHead">Offset Z</p>
+                    <textarea name="OffsetZ" id="OffsetZ" style="width: 100%;" placeholder="-5...5"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/params.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+@font-face {  
+    font-family: MC;  
+    src: url('../fonts/Monocraft.ttf');  
+    font-weight: normal;  
+    font-style: normal;  
+} 
+
+
+
+.Main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100vw;
+    height: 100vh;
+}
+.body {
+    background-color: black;
+    overflow-y: hidden;
+    /* overflow-x: hidden; */
+    margin: 0;
+    color: rgb(0,255,0);
+    font-family: MC; 
+    user-select: none;
+    -moz-user-select: none;
+}
+
+
+.Canvas{
+    border: 5px solid rgb(0,255,0) ;
+    position: relative;
+    margin-left: 1vw;
+}
+
+.Right{
+    flex-grow: 1;
+    position: relative;
+    display: block;
+    height: 100vh;
+    margin-top: 5vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    justify-items: center;
+}
+.right-item{
+    margin: 0;
+}
+.header {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.Grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 0.5fr;
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
+    grid-auto-flow: row;
+
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 50%;
+}
+.button {
+    font-family: MC; 
+    background-color: black;
+    border: 5px solid rgb(255,0,0);
+    color: rgb(255,0,0);
+}
+.Active {
+    border: 5px solid rgb(0,255,0);
+    color: rgb(0,255,0);
+}
+
+
+.TextArea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.TextAreaHead {
+    margin: 0;
+    margin-right: 1vw;
+}
+textarea {
+    height: 1vw;
+    background-color: black;
+    font-family: MC; 
+    color: rgb(0,255,0);
+    resize: none;
+    text-align: center;
+    overflow: hidden;
+}
